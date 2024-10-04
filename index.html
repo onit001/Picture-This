@@ -15,7 +15,24 @@
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    <picture>
+      <!-- Square image for screens 960px and larger -->
+      <source srcset="images/museum.jpg 320w,
+                      images/museum.jpg 640w,
+                      images/museum.jpg 960w"
+              media="(min-width: 960px)"
+              sizes="(min-width: 960px) 960px">
+
+      <!-- Landscape image for screens that are smaller than 960px -->
+      <source srcset="images/museum.jpg 320w,
+                      images/museum.jpg 640w,
+                      images/museum.jpg 960w"
+              media="(max-width: 959px)"
+              sizes="(max-width: 959px) 100vw">
+
+      <!-- Fallback image -->
+      <img src="images/museum.jpg" alt="placeholder">
+    </picture>
 
   </header>
 </body>
