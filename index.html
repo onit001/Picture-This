@@ -16,22 +16,20 @@
       <h4>My Really Cool Blog Post</h4>
     </div>
     <picture>
-      <!-- Square image for screens 960px and larger -->
-      <source srcset="images/museum.jpg 320w,
-                      images/museum.jpg 640w,
-                      images/museum.jpg 960w"
-              media="(min-width: 960px)"
-              sizes="(min-width: 960px) 960px">
+     <!-- Landscape images for viewports that are less than 960px -->
+     <source srcset="images/museum Landscape-320w.jpg 320w,
+                     images/museum Landscape-480w.jpg 480w,
+                     images/museum Landscape-720w.jpg 720w,
+                     images/museum Landscape-960w.jpg 960w"
+                     media="(max-width: 959px)">
+ 
+ <!-- Square images for viewports that are greater than or equal to 960px -->
+ <source srcset="images/museum square-960w.jpg 480w,
+                 images/museum square-1280w.jpg 640w,
+                 images/museum square-1600w.jpg 800w"
+                 media="(min-width: 960px)">
 
-      <!-- Landscape image for screens that are smaller than 960px -->
-      <source srcset="images/museum.jpg 320w,
-                      images/museum.jpg 640w,
-                      images/museum.jpg 960w"
-              media="(max-width: 959px)"
-              sizes="(max-width: 959px) 100vw">
-
-      <!-- Fallback image -->
-      <img src="images/museum.jpg" alt="placeholder">
+ <img src="images/museum.jpg" alt="placeholder" style="max-width: 100%; height: auto;">
     </picture>
 
   </header>
